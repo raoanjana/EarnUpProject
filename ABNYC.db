@@ -1,0 +1,24 @@
+DROP DATABASE IF EXISTS AB_NYC;
+CREATE SCHEMA IF NOT EXISTS AB_NYC;
+USE AB_NYC;
+
+
+CREATE TABLE room_loc (
+    id int NOT NULL,
+    name VARCHAR(255),
+    host_id INT NOT NULL,
+    host_name VARCHAR(255),
+    neighbourhood_group VARCHAR(255),
+    neighbourhood VARCHAR(100),
+    latitude DEC (9, 6) NOT NULL,
+    longitude DEC (9, 6) NOT NULL,
+    room_type VARCHAR(255),
+    price INT(10),
+    minimum_nights INT,
+    number_of_reviews INT,
+    last_review VARCHAR(100),
+    reviews_per_month DEC (4,2),
+    calculated_host_listings_count INT(10),
+    availability_365 INT(10),
+    PRIMARY KEY (id)
+);
